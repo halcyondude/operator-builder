@@ -85,7 +85,7 @@ jobs:
           fetch-depth: 0
 
       - name: Download operator-builder Binary
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: operator-builder
           path: bin
@@ -161,7 +161,7 @@ jobs:
           go-version: 1.16
 
       - name: Download ${{ matrix.name }} Codebase
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ matrix.artifact }}
           path: /tmp/operator-builder-test
